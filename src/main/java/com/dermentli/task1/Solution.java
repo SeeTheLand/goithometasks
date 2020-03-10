@@ -1,4 +1,5 @@
 package com.dermentli.task1;
+
 import static com.dermentli.util.Print.*;
 
 public class Solution {
