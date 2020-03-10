@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import static com.dermentli.util.Print.*;
 
 
-public class Solution2 {
+public class SolutionTwo {
     public static void main(String[] args) throws IOException {
         //reader initialization
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
