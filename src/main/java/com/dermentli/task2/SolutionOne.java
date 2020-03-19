@@ -21,7 +21,16 @@ public class SolutionOne {
         System.out.println("Город:      " + placeOfLiving);
         System.out.println("Возраст:    " + age);
         System.out.println("Хобби:      " + hobby);
+        System.out.println();
+
+        //второй вывод
+        System.out.println("Вариант 2 (текстовый):");
+        System.out.println("Человек по имени " + name + " живет в городе " + placeOfLiving + ".");
+        System.out.println("Этому человеку " + age + " лет и любит он заниматься " + hobby + ".");
+        System.out.println();
+
         
+
     }
 
 }
