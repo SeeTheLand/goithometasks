@@ -16,21 +16,26 @@ public class SolutionOne {
         String hobby = scanner.next();
 
         //первый вывод
+        System.out.println("----------------------------------");
         System.out.println("Вариант 1 (табличный):");
         System.out.println("Имя:        " + name);
         System.out.println("Город:      " + placeOfLiving);
         System.out.println("Возраст:    " + age);
         System.out.println("Хобби:      " + hobby);
-        System.out.println();
 
         //второй вывод
+        System.out.println("----------------------------------");
         System.out.println("Вариант 2 (текстовый):");
         System.out.println("Человек по имени " + name + " живет в городе " + placeOfLiving + ".");
         System.out.println("Этому человеку " + age + " лет и любит он заниматься " + hobby + ".");
         System.out.println();
 
-        
-
+        //третий вывод
+        System.out.println("----------------------------------");
+        System.out.println(name + " - имя");
+        System.out.println(placeOfLiving + " - город");
+        System.out.println(age + " - возраст");
+        System.out.println(hobby + " - хобби");
     }
 
 }
