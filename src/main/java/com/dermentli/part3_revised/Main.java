@@ -1,14 +1,9 @@
 package com.dermentli.part3_revised;
 
-import com.dermentli.task3.CountRepeatingElements;
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
-import java.util.Map;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class Main {
 
