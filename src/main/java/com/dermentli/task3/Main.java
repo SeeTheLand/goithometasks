@@ -1,25 +1,24 @@
-package com.dermentli.task3;
+package com.dermentli.part3_revised;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
-import java.util.Map;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String sArraySize = reader.readLine();
+        //String sArraySize = reader.readLine();
 
         //task 1)
-        int arraySize = Integer.parseInt(sArraySize); //getting array size
+        //int arraySize = Integer.parseInt(sArraySize); //getting array size
 
         //task 2)
+        System.out.println("Pls enter array with whitespace delimiter");
         String stringToSplit  = reader.readLine(); //reading input for further splitting
-        int[] inputArray = convertStringWithWhitespace(stringToSplit, arraySize);
+        int[] inputArray = convertStringWithWhitespace(stringToSplit);
 
         //task 3)
         minInArray(inputArray);
@@ -30,20 +29,21 @@ public class Main {
         //task 6)
         sortArray(inputArray);
 
-        //task 7) + 8) -- можно было сделать через сортировку массива, но через множество на мой взгляд лучше
+        //task 7) + 8)
         compareRepeat(inputArray);
 
-        //task 9) -- вывел как ДопЗадание task3.part9 (чтобы здесь не комментировать код)
+        //task 9) сразу работает без явного ввода длины массива
 
     }
 
-    public static int[] convertStringWithWhitespace(String stringToSplit, int arraySize) {
+    public static int[] convertStringWithWhitespace(String stringToSplit) {
         //creating array of digits
-        int[] inputArray = new int[arraySize];
         String[] sDigitArray = stringToSplit.split("\\s+");
+        int[] inputArray = new int[sDigitArray.length];
+
         //transferring String array to int, till int capacity reached
         try {
-            for (int i=0; i<arraySize; i++) {
+            for (int i=0; i<sDigitArray.length; i++) {
                 inputArray[i] = Integer.parseInt(sDigitArray[i]);
             }
             //System.out.println(Arrays.toString(inputArray));
@@ -85,27 +85,33 @@ public class Main {
     }
 
     public static void compareRepeat (int[] inputArray) {
-        int min = Integer.MAX_VALUE;
-        int max = Integer.MIN_VALUE;
-        String minValue = null;
-        String maxValue = null;
-        CountRepeatingElements result = new CountRepeatingElements();
-        Map<Object, AtomicInteger> dataSorted = result.countRepeatingElements(inputArray);
-        for(Map.Entry<Object, AtomicInteger> entry : dataSorted.entrySet()){
-            if(entry.getValue().intValue() < min){
-                min = entry.getValue().intValue();
-                minValue = entry.getKey().toString();
+        Arrays.sort(inputArray);
+        int maxRepeat = Integer.MIN_VALUE; //задаем мин мат значение для послед обработки
+        int minRepeat = Integer.MAX_VALUE; //задаем макс мат значение для послед обработки
+        int previous = inputArray[0]; //будет хранить предыдущий элемент отсортированного массива для сравнения с текущим
+        int buffer = 0; //будет считать кол-во повторений для текущего элемента
+        int maxVar = 0; //будет хранить значение элемента массива, повторяющееся наибольшее кол-во раз
+        int minVar = 0; //минимальное кол-во раз
+
+        for (int i : inputArray) {
+            if (i == previous) {            //сравниваем тек элемент с предыд
+                buffer++;                   //если равны инкремент буффер
+            } else {
+                if (buffer > maxRepeat) {   //если не равны, то проверяем буффер относится к мин или макс элементам
+                    maxRepeat = buffer;
+                    maxVar = previous;      //если буфер больше, чем значение максимальных повторений прошлых проходов, то меняем значения из массива с макс повторениями
+                }
+                if (buffer < minRepeat) {
+                    minRepeat= buffer;
+                    minVar = previous;
+                }
+                previous = i;   //меняем предыдущее значения для следующего цикла
+                buffer = 1;     //присваиваем значение 1 буффер, т.к. у нас появидся новый элемент для следующего прохода
             }
-            if(entry.getValue().intValue() > max){
-                max = entry.getValue().intValue();
-                maxValue = entry.getKey().toString();
-            }
-            // entry.getValue()
-            // entry.getKey()
         }
 
-        System.out.println("Ответ - " + max +". Так как число " + maxValue + " повторяется " + max + " раза");
-        System.out.println("Ответ - " + min +". Так как число " + minValue + " повторяется " + min + " раза");
+        System.out.println("Ответ - " + maxRepeat +". Так как число " + maxVar + " повторяется " + maxRepeat + " раза");
+        System.out.println("Ответ - " + minRepeat +". Так как число " + minVar + " повторяется " + minRepeat + " раза");
 
     }
 
