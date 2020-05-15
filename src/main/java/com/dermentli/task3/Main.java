@@ -1,4 +1,4 @@
-package com.dermentli.part3_revised;
+package com.dermentli.task3;
 
 import java.io.BufferedReader;
 import java.io.IOException;
