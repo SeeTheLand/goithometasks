@@ -1,4 +1,4 @@
-package com.dermentli.task5.carfunctions;
+package com.dermentli.task5;
 
 public class CarWheel extends Car {
     private double tyreWear;

@@ -1,4 +1,4 @@
-package com.dermentli.task5.carfunctions;
+package com.dermentli.task5;
 
 import java.util.Arrays;
 import java.util.Scanner;
