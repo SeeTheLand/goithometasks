@@ -1,7 +1,5 @@
 package com.dermentli.task4;
 
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
-
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -72,27 +70,13 @@ public class Main {
         return (a > (int)b) ? a : (int)b;
     }
     public static void upStreamRecursive(int x) {
-        class Reverse {
-            void reverseCall(int z, int x) {
-                System.out.println((z+1) - x);
-                if (x > 1) {
-                    reverseCall(z, --x);
-                }
-            }
+        if (x == 0) {
+            return;
+        } else {
+            upStreamRecursive(--x);
+            System.out.println(++x);
         }
-        new Reverse().reverseCall(x, x);
     }
-
-//    private static void drawReactangleStringRecursion(int width) {
-//        if (width < 1) {
-//            return;
-//        }
-//        else {
-//            drawReactangleStringRecursion(width-1);
-//            System.out.print("+ ");
-//        }
-//    }
-
     public static void drawRectangleRecursives(int width, int height, String line) {
         if (height > 0) {
             if (width > 0) {
@@ -103,6 +87,7 @@ public class Main {
             }
         }
     }
+
 }
 
 
