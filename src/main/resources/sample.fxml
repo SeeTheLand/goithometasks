@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dermentli.task6.Controller">
+   <children>
+      <ImageView fitHeight="126.0" fitWidth="77.0" layoutX="233.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/treebig.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="105.0" fitWidth="54.0" layoutX="442.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/tree.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="-5.0" prefHeight="68.0" prefWidth="624.0" style="-fx-background-color: #fca311;">
+         <children>
+            <Text fill="WHITE" layoutX="514.0" layoutY="25.0" stroke="#14213d" strokeType="OUTSIDE" strokeWidth="2.0" text="GoIT Home" wrappingWidth="77.13671875">
+               <font>
+                  <Font name="Berlin Sans FB" size="27.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="52.0" fitWidth="380.0" layoutX="77.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/header.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="45.0" fitWidth="54.0" layoutX="16.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/snow.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="89.0" fitWidth="39.0" layoutX="436.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/fir.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="89.0" fitWidth="39.0" layoutX="454.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/fir.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Text fill="#14213d" fontSmoothingType="LCD" layoutX="142.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Which task you would like to complete?" wrappingWidth="473.3505859375">
+         <font>
+            <Font name="Bodoni MT Black" size="26.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="237.0" fitWidth="275.0" layoutX="14.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/christmastree.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="273.0" fitWidth="355.0" layoutX="123.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/bench.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="89.0" fitWidth="39.0" layoutX="416.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/fir.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="503.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/tree.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="105.0" fitWidth="54.0" layoutX="316.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/tree.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="105.0" fitWidth="54.0" layoutX="370.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/tree.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="469.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/snowman.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="69.0" fitWidth="67.0" layoutX="59.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/star.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="starButtonStart" layoutX="21.0" layoutY="89.0" mnemonicParsing="false" text="STAR" />
+      <Button fx:id="snowmanButtonStart" layoutX="379.0" layoutY="302.0" mnemonicParsing="false" text="SNOW" />
+   </children>
+</AnchorPane>

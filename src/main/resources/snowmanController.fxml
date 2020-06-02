@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dermentli.task6.SnowmanController">
+    <children>
+        <AnchorPane layoutX="-5.0" prefHeight="68.0" prefWidth="624.0" style="-fx-background-color: #fca311;">
+            <children>
+                <Text fill="WHITE" layoutX="514.0" layoutY="25.0" stroke="#14213d" strokeType="OUTSIDE" strokeWidth="2.0" text="GoIT Home" wrappingWidth="77.13671875">
+                    <font>
+                        <Font name="Berlin Sans FB" size="27.0" />
+                    </font>
+                </Text>
+                <ImageView fitHeight="52.0" fitWidth="380.0" layoutX="77.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@img/header.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="45.0" fitWidth="54.0" layoutX="16.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@img/snow.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="89.0" fitWidth="39.0" layoutX="436.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@img/fir.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="89.0" fitWidth="39.0" layoutX="454.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@img/fir.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <ImageView fitHeight="89.0" fitWidth="39.0" layoutX="416.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@img/fir.png" />
+            </image>
+        </ImageView>
+      <Button fx:id="createCircleButton" layoutX="384.0" layoutY="215.0" mnemonicParsing="false" text="Create Circles" />
+        <TextField fx:id="numberOfCirles" layoutX="384.0" layoutY="102.0" promptText="Number of circles (3-5)" />
+        <TextField fx:id="minimalRadius" layoutX="384.0" layoutY="136.0" promptText="Minimal radius (30-40)" />
+        <TextField fx:id="maximalRadius" layoutX="384.0" layoutY="170.0" promptText="Maximum radius (40-50)" />
+      <Button fx:id="paintInRed" layoutX="384.0" layoutY="251.0" mnemonicParsing="false" style="-fx-background-color: ff008c;" text="Paint red" />
+      <Button fx:id="addGradient" layoutX="384.0" layoutY="290.0" mnemonicParsing="false" style="-fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #a9ad93, #c6e80e);" text="Gradient" />
+      <Button fx:id="back" layoutX="384.0" layoutY="324.0" mnemonicParsing="false" text="Main Menu" />
+    </children>
+</AnchorPane>
